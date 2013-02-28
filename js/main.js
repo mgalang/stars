@@ -16,8 +16,8 @@
     render: function(){
       var items = Star.all();
 
-      if(items.length){
-        $('.start').hide();
+      if(items.length <= 0){
+        $('.start').fadeIn();
       }
 
       this.$('.items').html('');
