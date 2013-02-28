@@ -24,15 +24,26 @@
 
       for(var i in items){
         if(items[i].active === 1){
-          var _class="icon-star";
-          var _btn_class="btn-primary"
+          var tpl = {
+            icon_class: "icon-star",
+            btn_class: "btn-primary"
+          };
         } else {
-          var _class="icon-star-empty";
-          var _btn_class="btn-inverse"
+          var tpl = {
+            icon_class: "icon-star-empty",
+            btn_class: "btn-inverse"
+          };
         }
-        this.$('.items')
-        .append('<a class="btn '+_btn_class+' btn-large star" data-id="'+items[i].id+'"><i class="icon-white '+_class+'"></i></a>');
+
+        tpl.id = items[i].id;
+
+        this
+          .$('.items')
+          .append(Mustache.render(this.template(), tpl));
       }
+    },
+    template: function(){
+      return $('#reward-button').html();
     },
     start: function(e){
       e.preventDefault();
@@ -46,9 +57,7 @@
       $(e.target).fadeOut();
     },
     toggle: function(e){
-      var id = $(e.currentTarget).data('id');
-
-      var record = Star.find(id);
+      var record = Star.find($(e.currentTarget).data('id'));
       record.active = 1 - record.active;
       record.save();
       this.render();
