@@ -1,0 +1,9 @@
+Stars - A simple star reward web app
+
+What's this?
+============
+
+I needed a reward system for my kid that allows me to give him a star everytime he deserves it,
+and if he completes it he gets a reward. This app does just that. 
+I built it with SpineJS, Bootstrap, Mustache, and HTML5 goodness. 
+Data are store using HTML5 local storage. 
