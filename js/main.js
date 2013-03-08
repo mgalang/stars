@@ -26,11 +26,11 @@
         if(items[i].active === 1){
           var tpl = {
             icon_class: "icon-star",
-            btn_class: "btn-primary"
+            btn_class: "btn-success"
           };
         } else {
           var tpl = {
-            icon_class: "icon-star-empty",
+            icon_class: "icon-star",
             btn_class: "btn-inverse"
           };
         }
@@ -57,10 +57,18 @@
       $(e.target).fadeOut();
     },
     toggle: function(e){
-      var record = Star.find($(e.currentTarget).data('id'));
+      var _target = $(e.currentTarget);
+      var record = Star.find(_target.data('id'));
       record.active = 1 - record.active;
       record.save();
-      this.render();
+
+      if(record.active){
+        _target.removeClass('btn-inverse flip bounceIn');
+        setTimeout(function(){ _target.addClass('btn-success flip'); }, 100);
+      } else {
+        _target.removeClass('btn-success flip bounceIn');
+        setTimeout(function(){ _target.addClass('btn-inverse flip'); }, 100);
+      }
     }
   });
 
