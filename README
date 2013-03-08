@@ -4,6 +4,9 @@ What's this?
 ============
 
 I needed a reward system for my kid that allows me to give him a star everytime he deserves it,
-and if he completes it he gets a reward. This app does just that. 
-I built it with SpineJS, Bootstrap, Mustache, and HTML5 goodness. 
-Data are store using HTML5 local storage. 
+and if he completes it he gets a reward. 
+
+This app is built using Spinejs, Bootstrap, Mustache, and HTML5. 
+Data are stored using HTML5 local storage. 
+
+Demo: http://mgalang.github.com/stars
