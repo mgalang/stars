@@ -1,0 +1,6 @@
+[submodule "js/vendor/mustache"]
+	path = js/vendor/mustache
+	url = git://github.com/janl/mustache.js.git
+[submodule "css/animate"]
+	path = css/animate
+	url = git://github.com/daneden/animate.css.git

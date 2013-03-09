@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/animate/animate.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Stars</a> 
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="app">
+
+            <!-- Main hero unit for a primary marketing message or call to action -->
+            <div class="hero-unit" id="rewards">
+                <h3>Complete to get a reward!</h3>
+                <p>You may get a star each day.</p>
+
+                <a href="#" class="btn btn-primary start">Start</a>
+                <div class="items">
+                </div>
+            </div>
+
+            <hr>
+
+            <footer>
+            </footer>
+
+        </div> <!-- /container -->
+
+        <!-- Templates -->
+
+        <script type="text/x-template" id="reward-button">
+          <a class="btn {{btn_class}} btn-large star animated bounceIn" data-id="{{id}}"><i class="icon-white {{icon_class}}"></i></a>
+        </script>
+
+        <!-- Le javascripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        
+        <script src="js/vendor/spine/spine.js"></script>
+        <script src="js/vendor/spine/local.js"></script>
+
+        <script src="js/vendor/mustache/mustache.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

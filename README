@@ -1,0 +1,12 @@
+Stars - A simple star reward web app
+
+What's this?
+============
+
+I needed a reward system for my kid that allows me to give him a star everytime he deserves it,
+and if he completes it he gets a reward. 
+
+This app is built using Spinejs, Bootstrap, Mustache, and HTML5. 
+Data are stored using HTML5 local storage. 
+
+Demo: http://mgalang.github.com/stars
